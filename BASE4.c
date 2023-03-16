@@ -13,11 +13,11 @@ int main(unsigned int argc,unsigned char **argv){
         FILE *in_file = 0;
         FILE *out_file = 0;
         in_file = fopen(argv[2],"r");
-        out_file = fopen(argv[3],"w");
         if(in_file == NULL){
             puts("IN file not exist.");
             return -1;
         }
+        out_file = fopen(argv[3],"w");
         setvbuf(in_file,NULL,_IONBF,0);
         setvbuf(out_file,NULL,_IONBF,0);
         fseek(in_file,0,2);
