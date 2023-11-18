@@ -12,12 +12,12 @@ int main(unsigned int argc,unsigned char **argv){
         unsigned short unfilled_block_size = 0;
         FILE *in_file = 0;
         FILE *out_file = 0;
-        in_file = fopen(argv[2],"r");
+        in_file = fopen(argv[2],"rb");
         if(in_file == NULL){
             puts("IN file not exist.");
             return -1;
         }
-        out_file = fopen(argv[3],"w");
+        out_file = fopen(argv[3],"wb");
         setvbuf(in_file,NULL,_IONBF,0);
         setvbuf(out_file,NULL,_IONBF,0);
         fseek(in_file,0,2);
